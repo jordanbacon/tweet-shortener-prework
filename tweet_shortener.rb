@@ -26,16 +26,3 @@ def word_substituter(tweet)
   end
     short_tweet.join(" ")
 end
-
-def word_substituter(tweet)
-  tweet_array = tweet.split(" ")
-  shortened_tweet = []
-  tweet_array.map do |word|
-    if dictionary.keys.include?(word.downcase)
-      shortened_tweet << dictionary[(word.downcase)]
-    else
-      shortened_tweet << word
-    end
-  end
-  shortened_tweet.join" ".to_s
-end
