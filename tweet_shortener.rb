@@ -15,9 +15,9 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  tweet_array = tweet.split(" ")
+  array = tweet.split(" ")
   short_tweet = []
-  tweet_array.map do |word|
+  array.map do |word|
     if dictionary.keys.include?(word.downcase)
       short_tweet << dictionary[(word.downcase)]
     else
@@ -27,10 +27,10 @@ def word_substituter(tweet)
     short_tweet.join(" ")
 end
 
-def bulk_tweet_shortener(array)
-  tweet_array = tweet.split(" ")
+def bulk_tweet_shortener(tweet_array)
+  array = tweet.split(" ")
   short_tweet = []
-  tweet_array.map do |word|
+  array.map do |word|
     if dictionary.keys.include?(word.downcase)
       short_tweet << dictionary[(word.downcase)]
     else
