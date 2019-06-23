@@ -29,14 +29,6 @@ end
 
 def bulk_tweet_shortener(tweet_array)
   tweet_array.each do |tweet|
-  array = tweet.split(" ")
-  short_tweet = []
-  array.map do |word|
-    if dictionary.keys.include?(word.downcase)
-      short_tweet << dictionary[(word.downcase)]
-    else
-      short_tweet << word
-    end
+    puts word_substituter(tweet)
   end
-    short_tweet.join(" ")
 end
